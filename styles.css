@@ -43,7 +43,7 @@ h1, h2, h3 {
     background: #87cefa;
     border-radius: 5px;
     margin: 10px 0;
-    padding: 10px;
+    padding: 15px;
     width: 40%;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     display: flex;
@@ -61,7 +61,7 @@ h1, h2, h3 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-	margin-right: 10px;
+    margin-right: 10px;
 }
 
 .event-time {
@@ -73,15 +73,16 @@ h1, h2, h3 {
 .event-date {
     font-size: 1em;
     color: #ff69b4;
-    font-weight: normal; /* Non-bold typeface */
+    font-weight: normal;
 }
 
 .event-name {
-    text-align: left; /* Left-align the event title */
+    text-align: left;
     color: #333;
     font-family: 'Bangers', cursive;
     font-size: 1.5em;
-    flex: 1; /* Allow it to take available space */
+    flex: 1;
+    margin-left: 10px;
 }
 
 .event-location {
@@ -94,4 +95,40 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 20px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .event {
+        width: 80%; /* Increase width for better readability */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .event-left, .event-name, .event-location {
+        margin: 5px 0; /* Add margin for spacing */
+    }
+
+    .event-name {
+        text-align: left; /* Ensure text alignment is left */
+        font-size: 1.2em; /* Adjust font size */
+    }
+
+    .event-time, .event-date {
+        font-size: 1em; /* Adjust font size */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 2em; /* Adjust header font size */
+    }
+
+    .hero {
+        padding: 50px 10px; /* Adjust padding for smaller screens */
+    }
+
+    .event {
+        width: 90%; /* Further increase width */
+    }
 }
